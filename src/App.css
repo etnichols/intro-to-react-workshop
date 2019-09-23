@@ -6,6 +6,11 @@
   height: 40vmin;
 }
 
+.Navigation {
+  text-decoration: none;
+  list-style: none;
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -19,17 +24,4 @@
 
 .App-link {
   color: #09d3ac;
-}
-
-.Password {
-  margin: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Password-Input {
-  padding: 10px;
-  margin: 10px;
-  width: 380px;
 }
