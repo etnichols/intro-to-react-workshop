@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import {interpolateColors} from './utils/colorinterpolator'
+import {interpolateColors} from '../../utils/colorinterpolator'
 import './Password.css'
 
 const RED = '252, 23, 3'
