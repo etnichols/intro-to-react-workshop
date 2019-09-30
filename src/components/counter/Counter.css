@@ -1,0 +1,16 @@
+.Example {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Clicks {
+  min-width: 200px;
+}
+
+button {
+  padding: 10px;
+  margin: 10px;
+  font-size: 18px;
+  min-width: 50px;
+}

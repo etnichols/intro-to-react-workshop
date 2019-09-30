@@ -1,24 +1,5 @@
 import React, { createContext } from 'react'
 
-// Testing out context.
-const MyContext = createContext('#ff0000')
+const ColorContext = createContext('#add8e6')
 
-const ContextExample = () => (
-  <MyContext.Consumer>
-    {value => (
-      <button
-        style={{ backgroundColor: `${value}` }}
-        onClick={() => {
-          console.log('You pressed the button.')
-        }}
-      >
-        Context value: {value}
-      </button>
-    )}
-  </MyContext.Consumer>
-)
-
-export {
-  MyContext,
-  ContextExample
-}
+export default ColorContext

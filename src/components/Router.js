@@ -1,19 +1,19 @@
 import React from 'react'
 import { BrowserRouter, Route, Link } from 'react-router-dom'
 
+import Counter from './counter/Counter'
 import Fetch from './fetch/Fetch'
 import Home from './home/Home'
+import List from './list/List'
 import PasswordInput from './password/PasswordInput'
 import PropsAndState from './propsandstate/PropsAndState'
-import {ContextExample} from './context/Context'
-import Button from './button/Button'
 
 const routes = [
-  ['/props-and-state/', 'Props and State'],
-  ['/password/', 'Password'],
-  ['/fetch-data/', 'Fetch data'],
-  ['/context/', 'Context'],
-  ['/button/', 'Button'],
+  ['/props-and-state/', 'Props and State', PropsAndState],
+  ['/password/', 'Password', PasswordInput],
+  ['/fetch-data/', 'Fetch data', Fetch],
+  ['/list/', 'Simple List', List],
+  ['/counter/', 'Counter', Counter],
 ]
 
 const Router = () => (
@@ -21,19 +21,17 @@ const Router = () => (
     <div>
       <nav>
         <ul className="Navigation">
-          {routes.map(([route, display]) => (
+          {routes.map(([path, display]) => (
             <li>
-              <Link to={route}>{display}</Link>
+              <Link to={path}>{display}</Link>
             </li>
           ))}
         </ul>
       </nav>
       <Route path="/" exact={true} component={Home} />
-      <Route path="/props-and-state/" component={PropsAndState} />
-      <Route path="/password/" component={PasswordInput} />
-      <Route path="/fetch-data/" component={Fetch} />
-      <Route path="/context/" component={ContextExample} />
-      <Route path="/button/" component={Button} />
+      {routes.map(([path, display, component]) => (
+        <Route path={path} exact={true} component={component} />
+      ))}
     </div>
   </BrowserRouter>
 )
