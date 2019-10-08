@@ -1,20 +1,23 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
+import './List.css'
+import '../../css/Base.css'
+
 const MY_FAVORITES = {
   food: 'Pizza Pringles',
-  drink: 'Sprite',
-  music: 'Lane 8',
+  drink: 'Fanta',
+  music: 'The Beatles',
   candy: 'Double Stuffed Oreos',
-  tv_show: 'Silicon Valley',
+  sport: 'Basketball',
 }
 
 class List extends Component {
   render() {
     return (
-      <div>
-        <h3>{this.props.listTitle}</h3>
-        <ul>
+      <div className="Container">
+        <h1>My favorite things</h1>
+        <ul className="Favorite-List">
           {Object.entries(MY_FAVORITES).map(([key, val]) => (
             <li>
               <b>{key}: </b>

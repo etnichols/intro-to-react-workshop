@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {interpolateColors} from '../../utils/colorinterpolator'
 import './Password.css'
 
@@ -31,11 +31,11 @@ const StrengthBar = ({ width, targetLength, currentLength }) => {
 }
 
 const PasswordInput = () => {
-  let [count, setCount] = useState(0)
   let [passwordLength, setPasswordLength] = useState(0)
 
   return (
     <div className="Password">
+    <h1>Password Strength Indicator</h1>
       <input
         className="Password-Input"
         type="password"

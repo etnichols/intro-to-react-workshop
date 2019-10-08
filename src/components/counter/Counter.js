@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+import '../../css/Base.css'
 import './Counter.css'
 import ColorContext from '../context/Context'
 
@@ -25,23 +26,27 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="Example">
-      <ColorContext.Consumer>
-        {value => (
-          <>
-            <button
-              style={{ background: value }}
-              onClick={this.dec.bind(this)}
-            >
-              Decrement
-            </button>
-            <p className="Clicks">Number of Clicks: {this.state.count}</p>
-            <button style={{ background: value }} onClick={this.inc.bind(this)}>
-              Increment
-            </button>
-            </>
-        )}
-      </ColorContext.Consumer>
+      <div>
+        <h1>Counter</h1>
+        <ColorContext.Consumer>
+          {value => (
+            <div className="Example">
+              <button
+                style={{ background: value }}
+                onClick={this.dec.bind(this)}
+              >
+                Decrement
+              </button>
+              <p className="Clicks">Counter: {this.state.count}</p>
+              <button
+                style={{ background: value }}
+                onClick={this.inc.bind(this)}
+              >
+                Increment
+              </button>
+            </div>
+          )}
+        </ColorContext.Consumer>
       </div>
     )
   }

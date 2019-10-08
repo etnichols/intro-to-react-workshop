@@ -19,9 +19,10 @@ const Fetch = () => {
   const loading = (<div className="Loading-Placeholder">
     <p>Loading...</p>
     </div>)
-  const body = url ? <img src={url} /> : loading
+  const body = url ? <img src={url} alt="A dog" /> : loading
   return (
     <div className="Container">
+    <h1>Fetching data</h1>
       {body}
       <button className="Button"
         onClick={() => {

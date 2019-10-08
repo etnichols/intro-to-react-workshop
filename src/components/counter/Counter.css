@@ -1,11 +1,13 @@
 .Example {
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
 .Clicks {
   min-width: 200px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 button {
@@ -13,4 +15,5 @@ button {
   margin: 10px;
   font-size: 18px;
   min-width: 50px;
+  border-radius: 4px;
 }

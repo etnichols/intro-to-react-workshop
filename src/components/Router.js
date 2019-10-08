@@ -6,14 +6,15 @@ import Fetch from './fetch/Fetch'
 import Home from './home/Home'
 import List from './list/List'
 import PasswordInput from './password/PasswordInput'
-import PropsAndState from './propsandstate/PropsAndState'
+import HelloWorld from './helloworld/HelloWorld'
 
 const routes = [
-  ['/props-and-state/', 'Props and State', PropsAndState],
+  ['/', 'Home', Home],
+  ['/hello-world/', 'Hello World', HelloWorld],
+  ['/counter/', 'Counter', Counter],
+  ['/list/', 'Simple List', List],
   ['/password/', 'Password', PasswordInput],
   ['/fetch-data/', 'Fetch data', Fetch],
-  ['/list/', 'Simple List', List],
-  ['/counter/', 'Counter', Counter],
 ]
 
 const Router = () => (
@@ -28,7 +29,6 @@ const Router = () => (
           ))}
         </ul>
       </nav>
-      <Route path="/" exact={true} component={Home} />
       {routes.map(([path, display, component]) => (
         <Route path={path} exact={true} component={component} />
       ))}
