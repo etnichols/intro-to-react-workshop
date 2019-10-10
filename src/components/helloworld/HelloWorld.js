@@ -1,10 +1,5 @@
 import React, { Component } from 'react'
-
 import Greeter from './Greeter'
-
-import '../../css/Base.css'
-
-const names = ['Bob', 'Sally', 'Nathan', 'Brittney']
 
 class HelloWorld extends Component {
   render() {
@@ -13,6 +8,7 @@ class HelloWorld extends Component {
       <h1>Hello World (Simple Component)</h1>
         <Greeter name="Bob" />
         <Greeter name="Sally" />
+        <Greeter name="Tim" />
       </div>
     )
   }

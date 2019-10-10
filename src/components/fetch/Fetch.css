@@ -6,6 +6,14 @@
   font-size: 32px;
 }
 
+.Image {
+  min-height: 300px;
+}
+
+.Hidden {
+  display: none;
+}
+
 img {
   max-width: 300px;
 }

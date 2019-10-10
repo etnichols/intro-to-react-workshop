@@ -1,9 +1,20 @@
 import React, { Component } from 'react'
 
-class Greeter extends Component {
+export default class Greeter extends Component {
   render() {
-    return <h3>Hello, {this.props.name}!</h3>
+    return React.createElement('h3', null, `Hello, ${this.props.name}`)
   }
 }
 
-export default Greeter
+class ExtendedGreeter extends Component {
+  render() {
+    return React.createElement(
+      'div',
+      null,
+      React.createElement(Greeter, { name: 'Ben' }, null),
+      React.createElement('p', null, 'Have a wonderful day!')
+    )
+  }
+}
+
+// export { Greeter, ExtendedGreeter }

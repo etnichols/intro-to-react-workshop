@@ -1,33 +1,50 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, createRef } from 'react'
 import '../../css/Base.css'
 import './Fetch.css'
 
+/** Fetch random pictures of dogs. */
 const Fetch = () => {
   const [url, setUrl] = useState('')
-  const [requestsTotal, setRequestsTotal] = useState(1);
-  const [requestsFulfilled, setRequestsFulfilled] = useState(0);
-  useEffect(() => {
-    const fetchData = async () =>
-      await fetch(`https://dog.ceo/api/breeds/image/random`)
-        .then(response => response.json())
-        .then(json => {
-          setUrl(json.message)
-          setRequestsFulfilled(requestsFulfilled+1)
-        })
-    fetchData()
-  }, [requestsTotal])
-  const loading = (<div className="Loading-Placeholder">
-    <p>Loading...</p>
-    </div>)
-  const body = url ? <img src={url} alt="A dog" /> : loading
+  const [requestsFulfilled, setRequestsFulfilled] = useState(0)
+  const [requestsTotal, setRequestsTotal] = useState(1)
+  const [isLoading, setIsLoading] = useState(true)
+  let imgRef = React.createRef()
+
+  useEffect(
+    () => {
+      const fetchData = async () => {
+        await fetch(`https://dog.ceo/api/breeds/image/random`)
+          .then(response => response.json())
+          .then(json => {
+            imgRef.current.src = json.message
+            imgRef.current.onload = () => {
+              setIsLoading(false)
+            }
+            setRequestsFulfilled(requestsFulfilled + 1)
+          })
+      }
+      fetchData()
+    },
+    [requestsTotal]
+  )
+
   return (
     <div className="Container">
-    <h1>Fetching data</h1>
-      {body}
-      <button className="Button"
+      <h1>Fetching data</h1>
+      <div className={`Loading-Placeholder ${isLoading ? '' : 'Hidden'}`}>
+        <p>Loading...</p>
+      </div>
+      <img
+        className={`Image ${isLoading ? 'Hidden' : ''}`}
+        ref={imgRef}
+        src={url}
+      />
+      <button
+        className="Button"
         onClick={() => {
           setUrl('')
-          setRequestsTotal(requestsTotal+1)
+          setRequestsTotal(requestsTotal + 1)
+          setIsLoading(true)
         }}
       >
         Refresh picture
