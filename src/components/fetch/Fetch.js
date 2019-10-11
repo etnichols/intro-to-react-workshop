@@ -10,30 +10,22 @@ const Fetch = () => {
   const [isLoading, setIsLoading] = useState(true)
   let imgRef = React.createRef()
 
-  useEffect(
-    () => {
-      const fetchData = async () => {
-        await fetch(`https://dog.ceo/api/breeds/image/random`)
-          .then(response => response.json())
-          .then(json => {
-            imgRef.current.src = json.message
-            imgRef.current.onload = () => {
-              setIsLoading(false)
-            }
-            setRequestsFulfilled(requestsFulfilled + 1)
-          })
+  useEffect(() => {
+    const fetchPicture = () => fetch(`https://dog.ceo/api/breeds/image/random`)
+    .then(response => response.json())
+    .then(json => {
+      imgRef.current.src = json.message
+      imgRef.current.onload = () => {
+        setIsLoading(false)
+        setRequestsFulfilled(requestsFulfilled + 1)
       }
-      fetchData()
-    },
-    [requestsTotal]
-  )
+    })
+    fetchPicture()
+  }, [requestsTotal])
 
   return (
     <div className="Container">
-      <h1>Fetching data</h1>
-      <div className={`Loading-Placeholder ${isLoading ? '' : 'Hidden'}`}>
-        <p>Loading...</p>
-      </div>
+      <h1>Fetching data with Hooks</h1>
       <img
         className={`Image ${isLoading ? 'Hidden' : ''}`}
         ref={imgRef}

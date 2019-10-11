@@ -35,7 +35,7 @@ const PasswordInput = () => {
 
   return (
     <div className="Password">
-    <h1>Password Strength Indicator</h1>
+    <h1>Password Strength (Advanced)</h1>
       <input
         className="Password-Input"
         type="password"
