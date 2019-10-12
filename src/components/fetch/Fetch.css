@@ -1,11 +1,19 @@
+img {
+  height: 100%;
+}
+
+.Container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  min-width: 600px;
+  min-height: 600px;
+}
+
 .Image {
   height: 300px;
   opacity: 1;
   transition: visibility 0.3s linear,opacity 0.3s linear;
-}
-
-img {
-  height: 100%;
 }
 
 .Hidden {
