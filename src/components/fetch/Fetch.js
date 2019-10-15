@@ -1,5 +1,5 @@
 import React, { useState, useEffect, createRef } from 'react'
-import '../../css/Base.css'
+import '../Base.css'
 import './Fetch.css'
 
 /** Fetch random pictures of dogs. */
@@ -21,8 +21,8 @@ const Fetch = () => {
   )
 
   return (
-    <div className="Container">
-      <h1>Fetching data with Hooks</h1>
+    <div className="Fetch-Container">
+      <h1>Fetching data with Hooks (Advanced)</h1>
       <img
         alt={'A random dog'}
         className={`Image ${isLoading ? 'Hidden' : ''}`}
@@ -39,7 +39,7 @@ const Fetch = () => {
           setIsLoading(true)
         }}
       >
-        Refresh picture
+        Fetch new picture
       </button>
       <p>Requests made: {requestsTotal}</p>
       <p>Requests fulfilled: {requestsFulfilled}</p>

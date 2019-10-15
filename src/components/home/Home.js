@@ -1,12 +1,12 @@
 import React from 'react'
-import './Home.css'
+import '../Base.css'
 
 const Home = () => {
   return (
-    <div>
+    <div className="Container">
       <h2>Welcome to the workshop!</h2>
-      <p>Code for this site: <a href="https://github.com/e-nichols/cuny-react-workshop">https://github.com/e-nichols/cuny-react-workshop</a></p>
-      <p>See the README for instructions on how to clone and run this code on your own computer.</p>
+      <p>The code for this demo is available at <a href="https://github.com/e-nichols/cuny-react-workshop">https://github.com/e-nichols/cuny-react-workshop</a></p>
+      <p>Follow the instructions in the <a href="https://github.com/e-nichols/cuny-react-workshop/blob/master/README.md">README</a> on how to clone and run this code on your own computer.</p>
     </div>
   )
 }

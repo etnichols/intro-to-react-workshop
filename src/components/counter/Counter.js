@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import '../../css/Base.css'
+import '../Base.css'
 import './Counter.css'
 import ColorContext from '../context/Context'
 
@@ -26,11 +26,11 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Counter</h1>
+      <div className="Container">
+        <h1 className="Example-Title">Counter</h1>
         <ColorContext.Consumer>
           {value => (
-            <div className="Example">
+            <div className="Counter">
               <button
                 style={{ background: value }}
                 onClick={this.dec.bind(this)}

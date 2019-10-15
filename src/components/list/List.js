@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 
 import './List.css'
-import '../../css/Base.css'
+import '../Base.css'
 
 const MY_FAVORITES = {
   food: 'Pizza Pringles',

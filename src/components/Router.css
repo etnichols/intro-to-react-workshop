@@ -1,0 +1,21 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+.Navigation {
+  list-style: none;
+  display: flex;
+}
+
+.Nav-Container {
+  display: flex;
+  justify-content: center;
+}
+
+.Active-Route {
+  font-weight: bold;
+}

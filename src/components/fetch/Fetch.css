@@ -2,12 +2,12 @@ img {
   height: 100%;
 }
 
-.Container {
+.Fetch-Container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  min-width: 600px;
-  min-height: 600px;
+  min-width: 500px;
+  min-height: 500px;
 }
 
 .Image {
@@ -17,6 +17,5 @@ img {
 }
 
 .Hidden {
-  display: hidden;
   opacity: 0;
 }
