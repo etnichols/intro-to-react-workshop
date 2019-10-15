@@ -16,7 +16,7 @@ class List extends Component {
   render() {
     return (
       <div className="Container">
-        <h1>My favorite things</h1>
+        <h1>List</h1>
         <ul className="Favorite-List">
           {Object.entries(MY_FAVORITES).map(([key, val]) => (
             <li>

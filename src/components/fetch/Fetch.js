@@ -22,7 +22,7 @@ const Fetch = () => {
 
   return (
     <div className="Fetch-Container">
-      <h1>Fetching data with Hooks (Advanced)</h1>
+      <h1>Fetching data with Hooks</h1>
       <img
         alt={'A random dog'}
         className={`Image ${isLoading ? 'Hidden' : ''}`}

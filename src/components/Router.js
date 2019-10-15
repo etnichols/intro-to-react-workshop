@@ -3,17 +3,19 @@ import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 
 import Counter from './counter/Counter'
 import Fetch from './fetch/Fetch'
+import Greeter from './greeter/Greeter'
 import Home from './home/Home'
 import List from './list/List'
 import PasswordInput from './password/PasswordInput'
-import Greeter from './greeter/Greeter'
+import Timer from './timer/Timer'
 
 import './Router.css'
 
 const routes = [
   ['/greeter/', 'Greeter', Greeter],
+  ['/list/', 'List', List],
   ['/counter/', 'Counter', Counter],
-  ['/list/', 'Simple List', List],
+  ['/timer/','Timer', Timer],
   ['/password/', 'Password', PasswordInput],
   ['/fetch-data/', 'Fetch data', Fetch],
 ]
