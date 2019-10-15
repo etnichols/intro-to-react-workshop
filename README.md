@@ -1,7 +1,7 @@
 ## [Workshop Slides](https://docs.google.com/presentation/d/1PIrW6FjWbl0Fafwve-pKXsQ9WgRGUt_1PdM37CI-Rcw/edit?usp=sharing)
 
 ## Prerequisites
- Download and install NodeJS [link](https://nodejs.org/en/download/), which comes with npm preinstalled.
+ Download and install NodeJS ([link to download](https://nodejs.org/en/download/)), which comes with `npm` preinstalled.
 
 ## Local development
 
