@@ -1,3 +1,5 @@
+# Intro to React Workshop
+
 ## Workshop slide deck
 [Available here](https://docs.google.com/presentation/d/1PIrW6FjWbl0Fafwve-pKXsQ9WgRGUt_1PdM37CI-Rcw/edit?usp=sharing)
 
