@@ -6,7 +6,7 @@ import './App.css'
 function App() {
   return (
     <div className="App">
-      <h1>CUNY React Workshop 2019</h1>
+      <h1>Intro to React Workshop</h1>
       <Router />
     </div>
   )
