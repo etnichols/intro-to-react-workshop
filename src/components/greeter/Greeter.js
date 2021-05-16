@@ -12,9 +12,9 @@ class ExtendedGreeter extends Component {
   render() {
     return React.createElement(
       'div',
-      null,
+      /* props= */ null,
       React.createElement(Greeter, { name: 'Ben' }, null),
-      React.createElement('p', null, 'Have a wonderful day!')
+      React.createElement('p', /* props= */ null, 'Have a wonderful day!')
     )
   }
 }

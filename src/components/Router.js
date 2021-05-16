@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { BrowserRouter, Route, NavLink } from 'react-router-dom'
 
-import Counter from './counter/Counter'
+import {Counter} from './counter/Counter'
 import Fetch from './fetch/Fetch'
 import Greeter from './greeter/Greeter'
 import Home from './home/Home'
