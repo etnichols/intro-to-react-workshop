@@ -11,7 +11,7 @@
 Clone the repository
 
 ```bash
-$ git clone https://github.com/e-nichols/cuny-react-workshop.git
+$ git clone https://github.com/e-nichols/intro-to-react-workshop.git
 ```
 
 `cd` into the project directory and run:
